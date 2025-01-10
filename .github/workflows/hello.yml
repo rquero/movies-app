@@ -1,4 +1,4 @@
-name: Say-hello
+name: Say hello
 
 on:
   push:
@@ -6,7 +6,7 @@ on:
       - main
 
 jobs:
-  hellow_word:
+  hellow_world:
     runs-on: ubuntu-18.04
     steps:
       - name: Echo the message
