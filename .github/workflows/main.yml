@@ -22,7 +22,7 @@ jobs:
       - name: Setup NodeJs
         uses: actions/setup-node@v4.1.0
         with:
-          node-version: "18"
+          node-version: "20"
       # Install dependencies
       - name: Install deps
         run: npm i
@@ -31,9 +31,9 @@ jobs:
         run: npm run build:prod
       # Deploy to Github pages
       - name: Deploy to Pages
-        uses: JamesIves/github-pages-deploy-action@releases/v2
+        uses: JamesIves/github-pages-deploy-action@v4
         with:
-          folder: movies-app/dist/browser
+          folder: dist/browser
           token: ${{ secrets.GH_TOKEN }}
           branch: prod
 
