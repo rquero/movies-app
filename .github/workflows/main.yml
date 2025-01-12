@@ -33,9 +33,9 @@ jobs:
       - name: Deploy to Pages
         uses: JamesIves/github-pages-deploy-action@releases/v2
         with:
-          ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+          ACCESS_TOKEN: ${{ secrets.GH_TOKEN }}
           BASE_BRANCH: main
           BRANCH: prod
-          FOLDER: movies-app/dist/browser
+          FOLDER: dist/browser
 
           
