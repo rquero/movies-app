@@ -31,9 +31,11 @@ jobs:
         run: npm run build:prod
       # Deploy to Github pages
       - name: Deploy to Pages
-        uses: crazy-max/ghaction-github-pages@v4,
+        uses: JamesIves/github-pages-deploy-action@releases/v2
         with:
-          build_dir: dist/movies-app/browser
-        env:
-          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
+          ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+          BASE_BRANCH: main
+          BRANCH: prod
+          FOLDER: movies-app/dist/browser
+
           
